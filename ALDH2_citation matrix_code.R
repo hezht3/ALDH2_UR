@@ -99,7 +99,7 @@ colnames(overlap) <- overlap[1, ]
 
 ########################################### method 2: use citation matrixes ##########################################
 
-setwd("F:/Box Sync/Duke Kunshan University Intern/6 ALDH2 SR/primary analysis/citation matrix/citation matrix 20201124")
+setwd("F:/Box Sync/Duke Kunshan University Intern/6 ALDH2 SR/primary analysis/citation matrix/citation matrix 20210221")
 filenames = list.files(pattern="*.csv")
 overlap2 <- data.frame(row.names = c("label", "CA", "CCA", "degree"))
 data_outcome2 <- list()
