@@ -8,6 +8,7 @@ data <- read.csv("data extraction table (primary study)_combine.csv")
 
 data$MA <- paste(data$MA..First.author, ", ", data$MA..Year)
 data$PR <- paste(data$PR..First.author, ", ", data$PR..Year)
+data$MA_PR <- paste(data$MA, ", ", data$PR)
 
 # exclude those studies that are not included in synthesis
 data$note <- NA
@@ -76,7 +77,7 @@ for(lab in label) {
   
   c <- nrow(table(data_outcome[[lab]]$MA))
   r <- nrow(table(data_outcome[[lab]]$PR))
-  N <- nrow(data_outcome[[lab]])
+  N <- nrow(table(data_outcome[[lab]]$MA_PR))
   
   CA <- round(N / (r * c), 2)
   CCA <- round((N - r) / (r * c - r), 2)
