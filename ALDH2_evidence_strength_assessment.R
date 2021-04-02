@@ -48,3 +48,4 @@ ma_data <- ma_data %>%
              )
 
 table(ma_data$assess)
+write.csv(ma_data, file = "F:/Box Sync/Duke Kunshan University Intern/6 ALDH2 SR/data synthesis/evidence strength assessment/output/evidence strength assessment.csv")
